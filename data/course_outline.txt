@@ -1,0 +1,20 @@
+COURSE OUTLINE
+Course Title: Introduction to Data Science
+Semester: Fall 2024
+Instructor: Dr. Rahul Iyer
+
+Course Description:
+An introductory course covering foundational concepts in data analysis, statistical modeling, and machine learning.
+
+Topics:
+- Data wrangling
+- EDA
+- Linear regression
+- Clustering
+- Neural networks
+
+Assessment:
+- Homework (30%)
+- Midterm (20%)
+- Project (30%)
+- Participation (20%)

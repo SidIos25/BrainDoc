@@ -1,0 +1,103 @@
+SOFTWARE LICENSE AND DEVELOPMENT AGREEMENT
+
+This Software License and Development Agreement (hereinafter "Agreement") is entered into as of January 15, 2026, by and between:
+
+LICENSOR: TechVision Inc., a Delaware corporation ("Licensor")
+ADDRESS: 456 Innovation Drive, San Francisco, CA 94105
+
+LICENSEE: StartupX Solutions LLC, a California limited liability company ("Licensee")
+ADDRESS: 789 Market Street, San Francisco, CA 94103
+
+WHEREAS, Licensor owns certain proprietary software and intellectual property; and
+
+WHEREAS, Licensee desires to obtain a license to use such software for specified purposes;
+
+NOW, THEREFORE, in consideration of the mutual covenants and agreements herein contained, the parties agree as follows:
+
+1. GRANT OF LICENSE
+
+1.1 License Grant. Licensor hereby grants to Licensee a non-exclusive, non-transferable license to use the Software (hereinafter "Software") known as "DataAnalyticsCore v2.0" solely for Licensee's internal business purposes.
+
+1.2 Scope. Licensee may install and use the Software on up to five (5) computers or servers.
+
+1.3 Restrictions. Licensee shall not:
+   (a) Reverse engineer, decompile, or disassemble the Software
+   (b) Modify, adapt, or create derivative works of the Software
+   (c) Rent, lease, or lend the Software to third parties
+   (d) Use the Software to develop competitive products
+   (e) Remove or obscure any proprietary notices or labels
+
+2. LICENSE FEE AND PAYMENT
+
+2.1 Initial License Fee. Licensee shall pay Licensor an initial license fee of $50,000 (fifty thousand dollars) due within thirty (30) days of execution of this Agreement.
+
+2.2 Annual Maintenance Fee. Beginning in year two, Licensee shall pay an annual maintenance and support fee of $10,000 (ten thousand dollars) due on each anniversary of this Agreement.
+
+2.3 Payment Terms. All payments shall be made via bank transfer to the account designated by Licensor. Late payments incur a penalty of 1.5% per month.
+
+3. SUPPORT AND MAINTENANCE
+
+3.1 Support Services. Licensor shall provide email support during business hours (9 AM - 5 PM PST, Monday-Friday) at no additional cost.
+
+3.2 Updates and Bug Fixes. Licensor shall provide critical security patches and bug fixes.
+
+3.3 No Warranty. The Software is provided "AS IS" without warranty of any kind, express or implied.
+
+4. INTELLECTUAL PROPERTY RIGHTS
+
+4.1 Ownership. All intellectual property rights in and to the Software, including patents, copyrights, and trade secrets, shall remain the exclusive property of Licensor.
+
+4.2 Feedback. Any feedback or suggestions provided by Licensee may be used by Licensor without obligation or compensation.
+
+5. CONFIDENTIALITY
+
+5.1 Confidential Information. Licensee acknowledges that the Software contains confidential and proprietary information of Licensor.
+
+5.2 Protection. Licensee shall protect the confidentiality of the Software using reasonable security measures.
+
+5.3 Disclosure. Licensee shall not disclose the Software or its contents to any third party without prior written consent from Licensor.
+
+6. LIMITATION OF LIABILITY
+
+6.1 Limitation. IN NO EVENT SHALL LICENSOR BE LIABLE FOR:
+   (a) Indirect, incidental, special, or consequential damages
+   (b) Loss of data, revenue, or profits
+   (c) Business interruption or loss of use
+   Even if Licensor has been advised of the possibility of such damages.
+
+6.2 Cap. Licensor's total liability under this Agreement shall not exceed the total amount paid by Licensee in the twelve (12) months preceding the claim.
+
+7. TERM AND TERMINATION
+
+7.1 Term. This Agreement shall commence on the date first written above and continue for an initial term of three (3) years.
+
+7.2 Renewal. This Agreement shall automatically renew for successive one-year periods unless either party provides written notice of non-renewal at least ninety (90) days before expiration.
+
+7.3 Termination for Cause. Licensor may terminate this Agreement immediately if Licensee:
+   (a) Breaches any material provision and fails to cure within thirty (30) days of written notice
+   (b) Uses the Software in violation of applicable laws
+   (c) Becomes insolvent or files for bankruptcy
+
+7.4 Termination for Convenience. Licensee may terminate this Agreement with ninety (90) days' written notice.
+
+7.5 Effect of Termination. Upon termination, Licensee shall immediately cease using the Software and destroy or return all copies.
+
+8. GOVERNING LAW AND DISPUTE RESOLUTION
+
+8.1 Governing Law. This Agreement shall be governed by the laws of the State of California.
+
+8.2 Jurisdiction. Both parties consent to the exclusive jurisdiction of the state and federal courts located in San Francisco County, California.
+
+9. ENTIRE AGREEMENT
+
+This Agreement constitutes the entire agreement and supersedes all prior discussions and understandings. No amendments shall be valid unless in writing and signed by both parties.
+
+IN WITNESS WHEREOF:
+
+LICENSOR: TechVision Inc.
+By: Robert Chen, CEO
+Date: January 15, 2026
+
+LICENSEE: StartupX Solutions LLC
+By: Jennifer Walsh, Managing Director
+Date: January 15, 2026

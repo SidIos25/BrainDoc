@@ -1,0 +1,33 @@
+.env
+*.env
+.venv/
+__pycache__/
+.pytest_cache/
+chat_history.pkl
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Bytecode & caches
+*.pyc
+*.pyo
+*.pyd
+.mypy_cache/
+
+# Editors & OS cruft
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs & coverage
+*.log
+logs/
+.coverage
+coverage.xml
+htmlcov/
+
+# Builds & artifacts
+dist/
+build/
+artifacts/

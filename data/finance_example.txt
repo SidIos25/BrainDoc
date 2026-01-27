@@ -1,0 +1,17 @@
+QUARTERLY FINANCIAL SUMMARY
+Company: NovaTech Inc.
+Period: Q2 2024 (April–June)
+
+Revenue:
+- Total Revenue: $2,450,000
+- Software Subscriptions: $1,620,000
+
+Expenses:
+- Operating Expenses: $1,720,000
+- R&D: $400,000
+
+Net Profit: $730,000
+
+Risks:
+- Currency exchange volatility in EU markets
+- Server upgrade may impact Q3

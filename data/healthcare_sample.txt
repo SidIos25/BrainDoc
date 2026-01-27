@@ -1,0 +1,22 @@
+Patient Name: John Doe
+DOB: 1980-03-12
+Date: 2024-11-10
+
+Chief Complaint:
+Persistent chest discomfort and fatigue during physical activity.
+
+Findings:
+- ECG shows signs of left ventricular hypertrophy.
+- Mild mitral valve regurgitation noted on echocardiogram.
+- Blood pressure: 148/95 mmHg
+- LDL cholesterol: 162 mg/dL (elevated)
+
+Impression:
+Patient demonstrates early signs of hypertension and possible cardiac remodeling.
+
+Recommendations:
+- Initiate lifestyle modifications (diet, exercise)
+- Begin antihypertensive therapy
+- Schedule stress test in 2 weeks
+
+Physician: Dr. Amanda Lee, MD

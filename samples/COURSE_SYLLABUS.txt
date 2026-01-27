@@ -1,0 +1,199 @@
+COURSE SYLLABUS
+
+COURSE INFORMATION
+
+Course Title: Advanced Machine Learning and Deep Neural Networks
+Course Code: CS 521
+Semester: Spring 2026
+Meeting Times: Monday, Wednesday 2:00 PM - 3:30 PM (Lectures)
+                Friday 2:00 PM - 4:00 PM (Lab Sessions)
+Location: Engineering Building, Room 301 (Lectures)
+Units: 4 (4 hours lecture, 2 hours lab per week)
+Credits: 4 units
+
+INSTRUCTOR INFORMATION
+
+Instructor: Dr. Eleanor Martinez, Ph.D.
+Email: e.martinez@university.edu
+Office: Engineering Building, Room 405
+Office Hours: Tuesday 1:00-3:00 PM, Thursday 1:00-3:00 PM
+
+Teaching Assistant: James Chen, M.S.
+Email: j.chen@university.edu
+Office Hours: Monday 4:00-5:30 PM, Wednesday 4:00-5:30 PM
+
+COURSE DESCRIPTION
+
+This advanced graduate seminar explores state-of-the-art techniques in deep learning and modern machine learning architectures. Topics include convolutional neural networks (CNNs), recurrent neural networks (RNNs), transformer models, attention mechanisms, and reinforcement learning. Students will implement models from recent research papers and apply them to real-world datasets.
+
+PREREQUISITES
+
+- CS 401: Machine Learning Fundamentals (or equivalent)
+- Linear Algebra
+- Python programming proficiency
+- Basic knowledge of calculus and probability
+
+COURSE OBJECTIVES AND LEARNING OUTCOMES
+
+Upon successful completion of this course, students will be able to:
+
+1. Understand the mathematical foundations of deep learning and neural network optimization
+2. Design and implement various neural network architectures (CNNs, RNNs, Transformers)
+3. Apply deep learning techniques to solve classification, regression, and sequence prediction problems
+4. Understand and apply attention mechanisms and transfer learning
+5. Implement reinforcement learning algorithms
+6. Evaluate and critique deep learning models using appropriate metrics
+7. Understand current research trends and limitations of deep learning
+8. Implement state-of-the-art models from academic papers
+
+REQUIRED MATERIALS
+
+Textbooks:
+- "Deep Learning" by Goodfellow, Bengio, and Courville (MIT Press, 2016)
+- "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" by Aurélien Géron (2nd Edition, O'Reilly Media, 2019)
+
+Software and Tools:
+- Python 3.9+ (free, open-source)
+- TensorFlow 2.x (free, open-source)
+- PyTorch 1.9+ (free, open-source)
+- Jupyter Notebook (free, open-source)
+- Google Colab (free cloud-based environment)
+- Git and GitHub (free)
+
+COURSE CONTENT AND TOPICS
+
+Week 1-2: Review and Fundamentals
+  - Neural networks and backpropagation review
+  - Optimization methods (SGD, Adam, RMSprop)
+  - Batch normalization and regularization techniques
+
+Week 3-5: Convolutional Neural Networks (CNNs)
+  - CNN architecture and convolution operations
+  - Classic architectures (LeNet, AlexNet, VGG, ResNet)
+  - Image classification applications
+
+Week 6-8: Recurrent Neural Networks (RNNs)
+  - RNN, LSTM, and GRU architectures
+  - Sequence modeling and time series prediction
+  - Vanishing gradient problem
+
+Week 9-10: Attention Mechanisms and Transformers
+  - Attention mechanisms and self-attention
+  - Transformer architecture
+  - BERT and GPT models
+  - Applications in NLP
+
+Week 11-12: Transfer Learning and Domain Adaptation
+  - Pre-trained models and fine-tuning strategies
+  - Domain adaptation techniques
+  - Few-shot learning
+
+Week 13-14: Reinforcement Learning
+  - Markov Decision Processes
+  - Q-Learning and Deep Q-Networks (DQN)
+  - Policy Gradient Methods
+
+Week 15: Advanced Topics and Emerging Research
+  - Generative Adversarial Networks (GANs)
+  - Variational Autoencoders (VAEs)
+  - Neural Architecture Search (NAS)
+
+COURSE REQUIREMENTS AND ASSESSMENT
+
+Grading Breakdown:
+- Attendance and Participation:     10%
+- Programming Assignments (6):      40%
+- Midterm Exam:                     20%
+- Final Project:                    30%
+Total:                             100%
+
+Grading Scale:
+A: 90-100%  |  B: 80-89%  |  C: 70-79%  |  D: 60-69%  |  F: Below 60%
+
+Details on Each Component:
+
+1. Attendance and Participation (10%)
+   - Attend lectures and labs regularly
+   - Participate in class discussions
+   - Ask questions and contribute to lab sessions
+   - More than 3 unexcused absences may result in grade reduction
+
+2. Programming Assignments (40%)
+   - Six assignments spaced throughout the semester
+   - Each assignment worth approximately 6.7%
+   - Assignments involve implementing models and analyzing results
+   - Due dates: Biweekly (see course schedule)
+   - Submission via GitHub and course portal
+   - Late submissions accepted with 10% penalty per day (max 3 days)
+
+3. Midterm Exam (20%)
+   - Date: Wednesday, March 12, 2026 (in-class)
+   - Duration: 2 hours
+   - Format: Mix of multiple choice, short answer, and coding problems
+   - Content: Weeks 1-8 material
+   - No external materials permitted
+
+4. Final Project (30%)
+   - Individual or team project (2-3 students max)
+   - Apply deep learning to a real-world dataset or research problem
+   - Deliverables:
+     * Project proposal (due Week 10): 5%
+     * Implementation and results (due Week 15): 15%
+     * Final presentation (Week 15): 10%
+   - Examples: Medical image analysis, NLP application, time series forecasting
+
+COURSE EXPECTATIONS AND POLICIES
+
+Attendance Policy:
+- Attendance is expected at all lectures and lab sessions
+- Notify instructor in advance if you must miss class
+- Unexcused absences may affect participation grade
+
+Academic Integrity:
+- All work must be original unless explicitly stated otherwise
+- Cite all sources, including code snippets and research papers
+- Collaboration on assignments is permitted but submit individual work
+- Cheating, plagiarism, or unauthorized assistance will result in failure
+
+Late Work:
+- Programming assignments: 10% penalty per day late (max 3 days)
+- No late submissions accepted after solutions are posted
+- Extensions may be granted with advance notice and valid reason
+
+Technology Requirements:
+- Laptop required for lab sessions
+- Must have Python and Jupyter Notebook installed
+- Reliable internet connection for accessing course materials
+
+Classroom Conduct:
+- Be respectful to instructor and fellow students
+- Arrive on time; minimize disruptions
+- Questions and discussions are encouraged
+
+COURSE SCHEDULE
+
+Week 1:  Fundamentals Review, Assignment 1 Released
+Week 2:  Optimization Methods
+Week 3:  CNNs Introduction, Assignment 1 Due
+Week 4:  CNN Architectures, Assignment 2 Released
+Week 5:  CNN Applications
+Week 6:  RNNs, Assignment 2 Due
+Week 7:  LSTMs and GRUs, Assignment 3 Released
+Week 8:  Sequence Modeling, Midterm Exam
+Week 9:  Attention and Transformers, Assignment 3 Due
+Week 10: BERT and Transfer Learning, Assignment 4 Released, Project Proposal Due
+Week 11: Domain Adaptation
+Week 12: Reinforcement Learning, Assignment 4 Due
+Week 13: Deep Q-Networks, Assignment 5 Released
+Week 14: Advanced Topics
+Week 15: Final Presentations, Assignment 5 and 6 Due, Project Final Due
+
+COURSE COMMUNICATION
+
+Class announcements: Course Management System (e-mail notifications enabled)
+Q&A forum: Check discussion board before emailing instructor
+Email response: Generally within 24 hours (excluding weekends)
+Preferred contact: e.martinez@university.edu with subject "CS 521: [Topic]"
+
+Instructor Signature: Dr. Eleanor Martinez
+Date: January 15, 2026

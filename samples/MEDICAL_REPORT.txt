@@ -1,0 +1,84 @@
+COMPREHENSIVE PATIENT MEDICAL REPORT
+
+Patient Information:
+Name: Michael Johnson
+Age: 52
+DOB: December 15, 1971
+Gender: Male
+MRN: 456789012
+
+Date of Examination: January 20, 2026
+Physician: Dr. Sarah Mitchell, MD
+
+Chief Complaint:
+Shortness of breath, persistent headaches, and fatigue for 3 weeks
+
+History of Present Illness:
+Patient reports experiencing moderate shortness of breath upon minimal exertion, frequent headaches in the morning, and general fatigue throughout the day. Symptoms began 3 weeks ago after a stressful period at work.
+
+Past Medical History:
+- Hypertension (diagnosed 5 years ago)
+- Type 2 Diabetes (diagnosed 8 years ago)
+- Hyperlipidemia (diagnosed 3 years ago)
+
+Medications:
+- Lisinopril 10mg daily (for hypertension)
+- Metformin 1000mg twice daily (for diabetes)
+- Atorvastatin 20mg daily (for cholesterol)
+
+Physical Examination:
+- Height: 5'10"
+- Weight: 195 lbs
+- BMI: 28.0 (overweight)
+- Blood Pressure: 155/98 mmHg (elevated)
+- Heart Rate: 92 bpm (slightly elevated)
+- Respiratory Rate: 20 breaths/min (normal range)
+- Temperature: 98.6°F
+- Oxygen Saturation: 96% on room air
+
+Laboratory Results:
+- Hemoglobin A1c: 8.2% (above target, indicating suboptimal diabetes control)
+- Fasting Glucose: 185 mg/dL (elevated)
+- Total Cholesterol: 215 mg/dL (borderline high)
+- LDL Cholesterol: 145 mg/dL (elevated)
+- HDL Cholesterol: 35 mg/dL (low)
+- Triglycerides: 210 mg/dL (elevated)
+- Creatinine: 1.1 mg/dL (normal)
+- BNP: 250 pg/mL (elevated - suggests possible heart strain)
+
+Imaging Studies:
+- Chest X-ray: Mild cardiomegaly noted; no acute pulmonary pathology
+- EKG: Sinus rhythm with left ventricular hypertrophy pattern
+- Echocardiogram: Ejection fraction 50% (borderline low); mild left atrial enlargement
+
+Assessment:
+1. Uncontrolled hypertension
+2. Poorly controlled Type 2 Diabetes Mellitus
+3. Dyslipidemia
+4. Possible early heart failure (LVEF borderline, elevated BNP)
+5. Left ventricular hypertrophy
+6. Obesity (BMI 28.0)
+
+Critical Health Risks Identified:
+- Increased risk for myocardial infarction (heart attack)
+- Progressive heart failure
+- Diabetic complications (nephropathy, neuropathy, retinopathy)
+- Stroke risk due to uncontrolled hypertension
+
+Clinical Recommendations:
+1. Increase Lisinopril to 20mg daily to better control blood pressure
+2. Add Amlodipine 5mg daily for additional BP control
+3. Adjust Metformin to 1500mg twice daily; consider adding GLP-1 agonist
+4. Increase Atorvastatin to 40mg daily
+5. Add Aspirin 81mg daily for cardiovascular protection
+6. Lifestyle modifications:
+   - Weight reduction goal: 170 lbs (10% reduction)
+   - Low-sodium diet (target <2000mg/day)
+   - Increase physical activity to 150 minutes/week moderate aerobic exercise
+   - Smoking cessation (if applicable)
+   - Stress management and sleep optimization
+7. Follow-up appointment in 4 weeks to reassess blood pressure and diabetes control
+8. Cardiology referral for further evaluation of possible heart failure
+
+Physician Signature: Dr. Sarah Mitchell, MD
+Date: January 20, 2026

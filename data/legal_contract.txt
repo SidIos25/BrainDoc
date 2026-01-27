@@ -1,0 +1,21 @@
+SERVICE AGREEMENT
+
+This Service Agreement is made effective as of January 1, 2024, between ClearTech Solutions ("Provider") and Helena Smith ("Client").
+
+Scope of Work:
+Provider will deliver IT consulting services, including system auditing and cybersecurity assessment.
+
+Term:
+This agreement shall remain in effect until March 31, 2024.
+
+Payment:
+Client agrees to pay $5,000 total.
+
+Termination:
+Either party may terminate this agreement with 15 days written notice.
+
+Liability:
+Provider is not liable for indirect or consequential damages.
+
+Governing Law:
+State of California
