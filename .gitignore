@@ -1,33 +1,74 @@
+# =====================
+# Environment & secrets
+# =====================
 .env
 *.env
-.venv/
-__pycache__/
-.pytest_cache/
-chat_history.pkl
-
-# Streamlit secrets
+.envrc
 .streamlit/secrets.toml
 
-# Bytecode & caches
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# =====================
+# Python cache & bytecode
+# =====================
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
+.pytest_cache/
 .mypy_cache/
+.dmypy.json
+.pyre/
+.ruff_cache/
 
-# Editors & OS cruft
+# =====================
+# Streamlit
+# =====================
+.streamlit/
+
+# =====================
+# IDEs & OS files
+# =====================
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
 
+# =====================
 # Logs & coverage
+# =====================
 *.log
 logs/
 .coverage
 coverage.xml
 htmlcov/
 
-# Builds & artifacts
-dist/
+# =====================
+# Builds & packaging
+# =====================
 build/
-artifacts/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+
+# =====================
+# Jupyter
+# =====================
+.ipynb_checkpoints/
+
+# =====================
+# Databases (ignore only if needed)
+# =====================
+db.sqlite3
+db.sqlite3-journal
+
+# =====================
+# IMPORTANT:
+# We are intentionally NOT ignoring:
+# chat_history.pkl
+# =====================
