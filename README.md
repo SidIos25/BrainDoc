@@ -14,7 +14,7 @@ BrainDoc AI is a Streamlit RAG app. Upload PDFs/DOCX/TXT, pick a domain (Healthc
 | 📄 Multi-file Upload             | Upload one or more PDFs, Word Docs, or TXT files                            |
 | 💬 Contextual Q&A               | Ask specific questions about document content                               |
 | 🧠 Custom Prompting             | Domain-aware prompts for tailored, relevant answers                         |
-| 💾 Chat Memory + History        | Stores past interactions between sessions                                   |
+| 💾 Chat Memory + History        | Stores past interactions between sessions; history is shown in the main view |
 | 📁 Sample Reports               | Try included examples in the `samples/` folder                             |
 | 📎 Source Citations             | Shows the top context chunks used for each answer                           |
 | 📊 Session Metrics              | Sidebar metrics: documents uploaded, chunks indexed, questions asked        |
@@ -22,13 +22,13 @@ BrainDoc AI is a Streamlit RAG app. Upload PDFs/DOCX/TXT, pick a domain (Healthc
 ---
 
 ## 🧭 How It Works
-1) Upload & parse: User uploads PDF/DOCX/TXT; `file_loader` saves temp files, reads, and chunks text (800 size, 100 overlap) with PDF fallbacks (PyPDF → PDFPlumber → PyMuPDF).
+1) Upload & parse: User uploads PDF/DOCX/TXT; `file_loader` saves temp files, reads, and chunks text (700 size, 100 overlap) with PDF fallbacks (PyPDF → PDFPlumber → PyMuPDF).
 2) Embed & index: `embedder` builds a FAISS vector store from chunks using OpenAI embeddings.
 3) Domain-aware prompting: `domain_prompts` picks the prompt for Healthcare/Legal/Finance/Education.
 4) Retrieval-augmented Q&A: `qa_chain` retrieves relevant chunks and queries the LLM with domain prompt + question.
 5) Safety checks: `app.py` blocks very long or suspect questions before sending to the model.
 6) Memory: `memory_manager` trims/saves chat history so answers stay concise across turns.
-7) UI loop: Streamlit renders results, shows session metrics, and lets the user continue asking questions.
+7) UI loop: Streamlit renders results, shows session metrics in the sidebar, and chat history in the main panel.
 8) Sources: After answers, a “Sources Used” section previews the top context chunks.
 
 High-level flow:
@@ -66,7 +66,6 @@ BrainDoc/
 │   └── FINANCIAL_REPORT.txt        (Finance)
 ├── tests/
 │   └── test_smoke.py
-└── .github/
 ```
 
 ---

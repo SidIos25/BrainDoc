@@ -25,7 +25,7 @@ def load_documents(uploaded_files):
 
             if suffix == ".pdf":
                 docs = []
-                splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100)
+                splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=100)
 
                 # Attempt 1: PyPDFLoader
                 try:
@@ -55,11 +55,11 @@ def load_documents(uploaded_files):
 
             elif suffix == ".docx":
                 pages = Docx2txtLoader(tmp_path).load()
-                splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100)
+                splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=100)
                 docs = splitter.split_documents(pages)
             elif suffix == ".txt":
                 pages = TextLoader(tmp_path).load()
-                splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100)
+                splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=100)
                 docs = splitter.split_documents(pages)
             else:
                 load_errors.append(f"Unsupported file type for {uploaded_file.name}")

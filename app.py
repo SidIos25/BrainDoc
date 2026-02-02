@@ -45,13 +45,45 @@ st.markdown(
     .stApp {background: linear-gradient(135deg, #f9fafb 0%, #f0f4ff 100%); color: #1a1d23 !important;}
     .block-container {padding-top: 2rem; padding-bottom: 2rem; max-width: 1200px;}
 
-    /* Cards and pills */
+    /* Sidebar text contrast on dark themes */
+    section[data-testid="stSidebar"] * {color: #ffffff !important;}
+    /* Ensure chat cards stay dark text on white backgrounds */
+    section[data-testid="stSidebar"] .sidebar-card,
+    section[data-testid="stSidebar"] .sidebar-card *,
+    section[data-testid="stSidebar"] .sidebar-answer-card,
+    section[data-testid="stSidebar"] .sidebar-answer-card * {color: #111111 !important;}
+
+    /* Collapsed sidebar toggle: ensure visible arrows */
+    [data-testid="collapsedSidebar"] {background: transparent !important;}
+    [data-testid="collapsedSidebar"] button {
+        background: transparent !important;
+        color: #ffffff !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    [data-testid="collapsedSidebar"] button svg {fill: #ffffff !important; stroke: #ffffff !important; opacity: 1 !important;}
+    [data-testid="collapsedSidebar"] button svg path {fill: #ffffff !important; stroke: #ffffff !important; opacity: 1 !important;}
+    [data-testid="collapsedSidebar"] button:hover {background: rgba(255, 255, 255, 0.12) !important; box-shadow: 0 8px 24px rgba(0,0,0,0.25) !important;}
+
+    /* Cards and pills *    
     .glass-card {background: #ffffff; border: 1px solid #e0e7ff; border-radius: 16px; padding: 1.25rem; box-shadow: 0 12px 30px rgba(79,70,229,0.08);} 
     .subtle {color: #4a4f57; font-size: 0.9rem;}
     .pill {display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; background: #e0e7ff; color: #4f46e5; font-size: 0.85rem; font-weight: 600;}
     
     /* Ensure all text is visible */
     p, span, div, label, h1, h2, h3, input, textarea {color: #1a1d23 !important;}
+
+    /* Override global text color for the collapsed sidebar toggle icon */
+    [data-testid="collapsedSidebar"] span {color: #ffffff !important;}
+    [data-testid="collapsedSidebar"] svg {fill: #ffffff !important; stroke: #ffffff !important;}
+    [data-testid="collapsedSidebar"] svg path {fill: #ffffff !important; stroke: #ffffff !important;}
+
+    /* Additional specificity for Streamlit header collapse button */
+    button[data-testid*="Sidebar"] {background: transparent !important; border: none !important; box-shadow: none !important;}
+    button[data-testid*="Sidebar"] span {color: #ffffff !important; opacity: 1 !important;}
+    button[data-testid*="Sidebar"] svg {fill: #ffffff !important; stroke: #ffffff !important; opacity: 1 !important;}
+    button[data-testid*="Sidebar"] svg path {fill: #ffffff !important; stroke: #ffffff !important; opacity: 1 !important;}
+    button[data-testid*="Sidebar"]:hover {background: rgba(255,255,255,0.12) !important; box-shadow: 0 8px 24px rgba(0,0,0,0.25) !important;}
 
     /* Inputs and form elements */
     textarea, input, .stTextInput > div > div > input {background: #ffffff !important; color: #1a1d23 !important; border: 2px solid #e0e7ff !important; border-radius: 12px; padding: 0.65rem 0.85rem; transition: border-color 0.2s;}
@@ -172,7 +204,7 @@ controls_col, chat_col = st.columns([1, 1.6], gap="large")
 st.sidebar.markdown(
         """
         <div style="padding: 0 0 1rem 0;">
-            <div style="font-size: 1.3rem; font-weight: 800; color:#4f46e5;">🧠✨ BrainDoc AI</div>
+            <div style="font-size: 1.3rem; font-weight: 800; color:white;">🧠✨ BrainDoc AI</div>
             <div style="font-size:0.9rem;color:#6b7280;">Unlock Insights from Every Document</div>
         </div>
         """,
@@ -212,26 +244,6 @@ with chat_col:
             st.sidebar.metric("Total Questions Asked", len(st.session_state.chat_history))
             if load_errors:
                 st.sidebar.write(f"File warnings: {len(load_errors)}")
-
-            # Sidebar chat history (only after documents are processed)
-            st.sidebar.markdown("### 💬 Chat History")
-            if st.session_state.chat_history:
-                for idx, (q, a) in enumerate(reversed(st.session_state.chat_history), 1):
-                    st.sidebar.markdown(f"""
-                        <div style="background: #ffffff; border: 1px solid #e5e6eb; border-radius: 10px; padding: 0.75rem; margin-bottom: 0.75rem;">
-                           <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #6b7280; margin-bottom: 0.3rem;">Question {idx}</div>
-                           <div style="color: #1a1d23; font-size: 0.85rem; line-height: 1.5;">{q}</div>
-                         </div>
-                    """, unsafe_allow_html=True)
-                    answer_preview = a[:120] + "..." if len(a) > 120 else a
-                    st.sidebar.markdown(f"""
-                        <div style="background: #f7f8fa; border: 1px solid #e5e6eb; border-radius: 10px; padding: 0.75rem; margin-bottom: 1rem;">
-                           <div style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #6b7280; margin-bottom: 0.3rem;">Answer {idx}</div>
-                           <div style="color: #1a1d23; font-size: 0.85rem; line-height: 1.5;">{answer_preview}</div>
-                         </div>
-                    """, unsafe_allow_html=True)
-            else:
-                st.sidebar.info("No chat history yet. Start a conversation!")
 
             # Chat input always visible when docs are ready
             user_question = st.text_input(
