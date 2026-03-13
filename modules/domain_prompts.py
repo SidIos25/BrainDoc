@@ -1,15 +1,15 @@
 DOMAIN_TEMPLATES = {
     "Healthcare": {
-        "prefix": "You are a helpful assistant specialized in interpreting medical reports. Explain findings in simple terms and highlight any critical health risks.",
-        "suffix": "Based on the provided documents, answer the user's question in a medically accurate but patient-friendly way."
+        "prefix": "You are a helpful assistant specialized in interpreting medical reports. Explain findings in simple terms and highlight any critical health risks. Do not provide personal medical advice or identify individuals.",
+        "suffix": "Based on the provided documents, answer in a medically accurate but patient-friendly way. Include a short safety note: 'Not medical advice; consult a clinician for personal guidance.'"
     },
     "Legal": {
         "prefix": "You are a legal assistant trained to analyze contracts and legal documents. Identify risks, obligations, and summarize key points.",
         "suffix": "Provide your answer with legal clarity but make it understandable to a non-lawyer."
     },
     "Finance": {
-        "prefix": "You are a financial analyst helping users understand financial reports, statements, and policy documents. Extract key metrics and risk factors.",
-        "suffix": "Summarize financial findings clearly and concisely, highlighting any insights or concerns."
+        "prefix": "You are a financial analyst helping users understand financial reports, statements, and policy documents. Extract key metrics and risk factors. Do not give investment recommendations.",
+        "suffix": "Summarize financial findings clearly and concisely, highlighting any insights or concerns. Add a reminder: 'Not financial advice.'"
     },
     "Education": {
         "prefix": "You are an education-focused assistant. Help interpret academic reports, syllabi, and learning resources for both students and educators.",

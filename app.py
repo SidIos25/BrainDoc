@@ -2,6 +2,7 @@
 
 import streamlit as st
 import os
+from typing import Optional
 from dotenv import load_dotenv
 from modules.file_loader import load_documents
 from modules.embedder import create_vectorstore
@@ -19,8 +20,26 @@ SUSPECT_PATTERNS = [
     "password",
 ]
 
+PHI_PATTERNS = [
+    "patient name",
+    "date of birth",
+    "dob",
+    "address",
+    "phone number",
+    "mrn",
+    "medical record",
+    "insurance id",
+]
 
-def is_question_safe(question: str):
+DOMAIN_DISCLAIMERS = {
+    "Healthcare": "Not medical advice. Do not include PHI; consult a clinician for personal guidance.",
+    "Finance": "Not financial advice; verify with a licensed professional.",
+    "Legal": "Informational only; not legal advice.",
+    "Education": "Educational support; verify requirements with your institution.",
+}
+
+
+def is_question_safe(question: str, domain: Optional[str] = None):
     lowered = question.lower()
 
     if len(question) > 2000:
@@ -28,6 +47,9 @@ def is_question_safe(question: str):
 
     if any(pattern in lowered for pattern in SUSPECT_PATTERNS):
         return False, "Detected potentially unsafe or PII-seeking instruction."
+
+    if domain == "Healthcare" and any(pattern in lowered for pattern in PHI_PATTERNS):
+        return False, "Healthcare guardrail: please avoid PHI (names, DOB, addresses, IDs)."
 
     return True, ""
 
@@ -213,6 +235,9 @@ st.sidebar.markdown(
 
 with controls_col:
     domain = st.selectbox("Document Domain", ["Healthcare", "Legal", "Finance", "Education"], help="Prompts adapt tone and focus per domain.")
+    guardrail_msg = DOMAIN_DISCLAIMERS.get(domain, "")
+    if guardrail_msg:
+        st.info(guardrail_msg)
     uploaded_files = st.file_uploader(
         "Upload PDF, DOCX, or TXT files",
         type=["pdf", "docx", "txt"],
@@ -228,14 +253,24 @@ with chat_col:
     elif not openai_api_key:
         st.warning("Set OPENAI_API_KEY in your .env to generate answers.")
     else:
-        with st.spinner("Processing documents..."):
+        with st.spinner("Indexing documents... (parsing & embedding)"):
             all_docs, load_errors = load_documents(uploaded_files)
+
+        retriever = None
+        embed_errors = []
+
+        if all_docs:
+            retriever, embed_errors = create_vectorstore(all_docs, openai_api_key)
 
         if load_errors:
             st.warning("Some files could not be processed:\n" + "\n".join(load_errors))
 
-        if all_docs:
-            retriever = create_vectorstore(all_docs, openai_api_key)
+        if embed_errors:
+            st.warning("Some chunks were skipped during embedding:\n" + "\n".join(embed_errors))
+
+        if not all_docs or retriever is None:
+            st.error("No documents were processed successfully.")
+        else:
             qa_chain = build_qa_chain(retriever, openai_api_key, domain)
 
             st.sidebar.markdown("### Session Metrics")
@@ -253,11 +288,11 @@ with chat_col:
             )
 
             if user_question:
-                is_safe, reason = is_question_safe(user_question)
+                is_safe, reason = is_question_safe(user_question, domain)
                 if not is_safe:
                     st.warning(f"Question blocked for safety: {reason}")
                 else:
-                    with st.spinner("Generating answer..."):
+                    with st.spinner("Retrieving answer..."):
                         try:
                             result = qa_chain.run(user_question)
                             answer = result["answer"] if isinstance(result, dict) and "answer" in result else result
@@ -298,5 +333,3 @@ with chat_col:
                         st.write(q)
                         st.markdown("**Answer**")
                         st.write(a)
-        else:
-            st.error("No documents were processed successfully.")
