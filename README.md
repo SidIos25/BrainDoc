@@ -135,12 +135,6 @@ pytest -q
 
 ---
 
-## 🔒 Security
-- Keep secrets out of Git: `.env` is ignored by `.gitignore` (use `.env.example` to share the shape).
-- Before pushing, run `git status` to confirm `.env` and `chat_history.pkl` are not staged.
-
----
-
 ## 📜 License
 MIT
 
