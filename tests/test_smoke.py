@@ -31,7 +31,7 @@ def test_domain_prompt_defaults_to_education():
     prompt = get_domain_prompt("UnknownDomain")
 
     assert prompt["prefix"].startswith("You are an education-focused assistant")
-    assert "educational context" in prompt["suffix"].lower()
+    assert "action checklist" in prompt["suffix"].lower()
 
 
 def test_memory_manager_trims_history(tmp_path):

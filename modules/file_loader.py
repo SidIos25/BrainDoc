@@ -1,5 +1,7 @@
 import os
 import tempfile
+from typing import List, Tuple
+
 from pypdf.errors import PdfReadError
 from langchain_community.document_loaders import (
     PyPDFLoader,
@@ -10,9 +12,11 @@ from langchain_community.document_loaders import (
 )
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-def load_documents(uploaded_files):
+
+def load_documents(uploaded_files) -> Tuple[List, List[str]]:
     all_docs = []
     load_errors = []
+    splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=100)
 
     for uploaded_file in uploaded_files:
         suffix = os.path.splitext(uploaded_file.name)[1].lower()
@@ -25,7 +29,6 @@ def load_documents(uploaded_files):
 
             if suffix == ".pdf":
                 docs = []
-                splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=100)
 
                 # Attempt 1: PyPDFLoader
                 try:
@@ -55,11 +58,9 @@ def load_documents(uploaded_files):
 
             elif suffix == ".docx":
                 pages = Docx2txtLoader(tmp_path).load()
-                splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=100)
                 docs = splitter.split_documents(pages)
             elif suffix == ".txt":
-                pages = TextLoader(tmp_path).load()
-                splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=100)
+                pages = TextLoader(tmp_path, autodetect_encoding=True).load()
                 docs = splitter.split_documents(pages)
             else:
                 load_errors.append(f"Unsupported file type for {uploaded_file.name}")
@@ -68,6 +69,10 @@ def load_documents(uploaded_files):
             if not docs:
                 load_errors.append(f"{uploaded_file.name}: no readable content found")
                 continue
+
+            # Use original uploaded filename instead of temporary paths in metadata.
+            for doc in docs:
+                doc.metadata["source"] = uploaded_file.name
 
             all_docs.extend(docs)
         except PdfReadError as exc:
